@@ -1,4 +1,4 @@
-function activate_tablesort() {
+function activateTablesort() {
   var tables = document.getElementsByClassName('tablesort');
   for (var i = 0; i < tables.length; i++) {
     new Tablesort(tables[i]);
