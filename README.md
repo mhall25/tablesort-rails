@@ -1,6 +1,6 @@
 # Tablesort for Rails
 
-Wraps [tristen's tablesort javascript library](https://github.com/tristen/tablesort) into a package that's easy to include in a Rails app.  This gem includes version 5.0.2 of tablesort (Nov 12, 2017).
+A lightweight, unobtrusive alternative to jQuery's tablesort.  Wraps [tristen's tablesort javascript library](https://github.com/tristen/tablesort) into a package that's easy to include in a Rails app.  This gem includes version 5.0.2 of tablesort (Nov 12, 2017).
 
 ## Setup
 
