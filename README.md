@@ -2,6 +2,8 @@
 
 A lightweight, unobtrusive alternative to jQuery's tablesort.  Wraps [tristen's tablesort javascript library](https://github.com/tristen/tablesort) into a package that's easy to include in a Rails app.  This gem includes version 5.0.2 of tablesort (Nov 12, 2017).
 
+The base script (alphabetical sort only) is just 3kb.  For another 3kb, you can include a set of special sort methods.
+
 ## Build
 
 Clone the repository and build the gem:
@@ -28,7 +30,6 @@ Add to your `application.js`:
 
 ```
 //= require tablesort
-//= require tablesort-autostart
 ```
 
 Add to your `application.css`:
@@ -79,22 +80,21 @@ Disable sorting on a column by adding the `no-sort` class and setting `data-sort
 
 ## More sorts
 
-The default sorting mehtod will do simple alphabetical sorting, but sometimes you need something special.  Add the following lines to your `application.js` for these features:
+The default sorting method will do simple alphabetical sorting, but sometimes you need something special.  Add the following line to your `application.js`:
 
-**Dates:** Sorts arbitrarily-formatted dates (ex. 12-2-70, 10/11/1969, etc.)  
-`//= require tablesort-date`
+```
+//= require tablesort-extra
+```
 
-**Dot Separator:** Sorts dot-separated version numbers (ex. 11.0.1, 31.0.1650.57)  
-`//= require tablesort-dotsep`
+You'll now have access to the following sort methods:
 
-**Filesize:** Sorts by filesize, taking suffixes into account (ex. 124k, 134.56 GB, 19.4 K, 4.13 TiB)  
-`//= require tablesort-filesize`
-
-**Month names:** Sorts month names by their chronological order  
-`//= require tablesort-monthname`
-
-**Numbers:** Sorts numbers, including currency  
-`//= require tablesort-number`
+Method | Description | Example data
+------ | ----------- | ------------
+Dates | Sorts arbitrarily-formatted dates | 12-2-70, 10/11/1969
+Dot separator | Sorts dot-separated version numbers | 11.0.1, 31.0.1650.57
+Filesize | Sorts by filesize, taking suffixes into account | 124k, 134.56 GB, 19.4 K, 4.13 TiB
+Month names | Sorts month names in chronological order | January, April
+Numbers | Sorts numbers, including currency |
 
 After requiring the sorter, specify the column it should be used on:
 
