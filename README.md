@@ -4,20 +4,12 @@ A lightweight, unobtrusive alternative to jQuery's tablesort.  Wraps [tristen's 
 
 The base script (alphabetical sort only) is just 3kb.  For another 3kb, you can include a set of special sort methods.
 
-## Build
-
-Clone the repository and build the gem:
-
-```
-gem build tablesort-rails.gemspec
-```
-
 ## Setup
 
 Add the following to your Gemfile:
 
 ```
-gem 'tablesort', path: 'path/to/packaged/gemfile'
+gem 'tablesort-rails', '~> 1.1'
 ```
 
 then execute:
