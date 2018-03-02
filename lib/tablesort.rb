@@ -1,1 +1,3 @@
-require 'tablesort/engine'
+module TablesortRails
+  require 'tablesort/engine'
+end
